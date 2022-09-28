@@ -2,27 +2,27 @@ import "package:flutter/material.dart";
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:vinote/constants.dart';
-import 'package:vinote/screens/book_shelf/components/book_component.dart';
+import 'package:vinote/screens/bookshelf/components/app_book.dart';
 
-class BookShelfScreen extends StatefulWidget {
-  const BookShelfScreen({super.key});
+class BookshelfScreen extends StatefulWidget {
+  const BookshelfScreen({super.key});
 
   @override
-  State<BookShelfScreen> createState() => _BookShelfScreenState();
+  State<BookshelfScreen> createState() => _BookshelfScreenState();
 }
 
-class _BookShelfScreenState extends State<BookShelfScreen> {
+class _BookshelfScreenState extends State<BookshelfScreen> {
   ValueNotifier<bool> isDialOpen = ValueNotifier(false);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: whiteColor,
+        backgroundColor: primaryColor,
         centerTitle: true,
         title: Text(
-          'Book Shelf',
-          style: blackTextStyle.copyWith(fontWeight: FontWeight.w600),
+          'Bookshelf',
+          style: whiteTextStyle.copyWith(fontWeight: FontWeight.w600),
         ),
         elevation: 1,
         shadowColor: Colors.black38,
@@ -67,40 +67,35 @@ class _BookShelfScreenState extends State<BookShelfScreen> {
       body: SafeArea(
           child: GridView.count(
         padding: const EdgeInsets.all(20),
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 10,
-        crossAxisCount: 4,
-        children: <Widget>[
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[100],
-            child: const Text("He'd have you all unravel at the"),
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[200],
-            child: const Text('Heed not the rabble'),
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[300],
-            child: const Text('Sound of screams but the'),
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[400],
-            child: const Text('Who scream'),
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[500],
-            child: const Text('Revolution is coming...'),
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[600],
-            child: const Text('Revolution, they...'),
-          ),
+        childAspectRatio: 4.7 / 10,
+        crossAxisSpacing: 20,
+        mainAxisSpacing: 20,
+        crossAxisCount: 6,
+        children: [
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
+          AppBook(),
         ],
       )),
     );

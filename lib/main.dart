@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vinote/constants.dart';
-import 'package:vinote/screens/book_shelf/book_shelf_screen.dart';
+import 'package:vinote/screens/bookshelf/bookshelf_screen.dart';
 import 'package:vinote/screens/splash/splash_screen.dart';
 
 void main() {
@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
               ColorScheme.fromSwatch().copyWith(secondary: primaryColor)),
       routes: {
         'splash.index': (context) => const SplashScreen(),
-        'book-shelf.index': (context) => const BookShelfScreen(),
+        'bookshelf.index': (context) => const BookshelfScreen(),
       },
     );
   }

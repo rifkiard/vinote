@@ -22,3 +22,4 @@ const Color gray900Color = Color(0xff111827);
 
 TextStyle bodyTextStyle = GoogleFonts.openSans(color: gray600Color);
 TextStyle blackTextStyle = GoogleFonts.openSans(color: blackColor);
+TextStyle whiteTextStyle = GoogleFonts.openSans(color: whiteColor);
