@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-const double defaultSpace = 15.0;
+const double defaultSpace = 30.0;
 const Color whiteColor = Color(0xffffffff);
 const Color primaryColor = Color(0xff3EB27F);
 const Color backgroundColor = whiteColor;

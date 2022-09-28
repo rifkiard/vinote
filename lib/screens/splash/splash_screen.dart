@@ -14,8 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Future.delayed(const Duration(seconds: 2), () {
-      Navigator.pushNamedAndRemoveUntil(
-          context, "bookshelf.index", (route) => false);
+      Navigator.pushNamedAndRemoveUntil(context, "bookshelf", (route) => false);
     });
   }
 

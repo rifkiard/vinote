@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:vinote/components/app_note_creation_dialog.dart';
 import 'package:vinote/constants.dart';
 import 'package:vinote/screens/bookshelf/components/app_book.dart';
 
@@ -42,7 +43,6 @@ class _BookshelfScreenState extends State<BookshelfScreen> {
               foregroundColor: Colors.white,
               label: 'Import PDF',
               onTap: () {},
-              onLongPress: () {},
               elevation: 1,
             ),
             SpeedDialChild(
@@ -51,7 +51,6 @@ class _BookshelfScreenState extends State<BookshelfScreen> {
               foregroundColor: Colors.white,
               label: 'New Folder',
               onTap: () {},
-              onLongPress: () {},
               elevation: 1,
             ),
             SpeedDialChild(
@@ -59,14 +58,20 @@ class _BookshelfScreenState extends State<BookshelfScreen> {
               backgroundColor: primaryColor,
               foregroundColor: Colors.white,
               label: 'New Note',
-              onTap: () {},
-              onLongPress: () {},
+              onTap: () {
+                showDialog(
+                  context: context,
+                  barrierDismissible: false,
+                  builder: (BuildContext context) =>
+                      const AppNoteCreationDialog(),
+                );
+              },
               elevation: 1,
             ),
           ]),
       body: SafeArea(
           child: GridView.count(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.symmetric(horizontal: defaultSpace, vertical: 31),
         childAspectRatio: 4.7 / 10,
         crossAxisSpacing: 20,
         mainAxisSpacing: 20,

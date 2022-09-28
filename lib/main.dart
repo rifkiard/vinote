@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vinote/constants.dart';
 import 'package:vinote/screens/bookshelf/bookshelf_screen.dart';
+import 'package:vinote/screens/note_creation/note_creation_screen.dart';
 import 'package:vinote/screens/splash/splash_screen.dart';
 
 void main() {
@@ -19,15 +20,16 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'splash.index',
+      initialRoute: 'splash',
       theme: ThemeData(
           primaryColor: primaryColor,
           scaffoldBackgroundColor: backgroundColor,
           colorScheme:
               ColorScheme.fromSwatch().copyWith(secondary: primaryColor)),
       routes: {
-        'splash.index': (context) => const SplashScreen(),
-        'bookshelf.index': (context) => const BookshelfScreen(),
+        'splash': (context) => const SplashScreen(),
+        'bookshelf': (context) => const BookshelfScreen(),
+        'note-creation': (context) => const NoteCreationScreen(),
       },
     );
   }

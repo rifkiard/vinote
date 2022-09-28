@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:vinote/components/app_book_cover.dart';
 import 'package:vinote/constants.dart';
 
 class AppBook extends StatelessWidget {
@@ -9,27 +10,8 @@ class AppBook extends StatelessWidget {
     return InkWell(
       child: Column(
         children: [
-          AspectRatio(
-              aspectRatio: 5 / 8,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(4),
-                  color: Colors.green,
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/cover.jpeg"),
-                    fit: BoxFit.cover,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 0,
-                      blurRadius: 5,
-                      offset: Offset(0, 0), // changes position of shadow
-                    ),
-                  ],
-                ),
-              )),
-          SizedBox(
+          const AppBookCover(image: 'assets/images/cover-2.jpeg'),
+          const SizedBox(
             height: 12,
           ),
           Text(
