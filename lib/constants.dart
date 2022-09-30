@@ -23,3 +23,12 @@ const Color gray900Color = Color(0xff111827);
 TextStyle bodyTextStyle = GoogleFonts.openSans(color: gray600Color);
 TextStyle blackTextStyle = GoogleFonts.openSans(color: blackColor);
 TextStyle whiteTextStyle = GoogleFonts.openSans(color: whiteColor);
+TextStyle mutedTextStyle = GoogleFonts.openSans(color: gray400Color);
+
+const double paperA4Size = 1 / 1.4142;
+const double paperA4LandscapeSize = 1.4142 / 1;
+const double bookCoverSize = 1 / 1.6;
+
+enum ThemeColors { primary, success, warning, danger }
+
+enum PaperSizes { a4 }

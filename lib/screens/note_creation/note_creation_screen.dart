@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:vinote/components/app_input.dart';
 import 'package:vinote/constants.dart';
 
 class NoteCreationScreen extends StatefulWidget {
@@ -15,7 +16,6 @@ class _NoteCreationScreenState extends State<NoteCreationScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: whiteColor,
-        centerTitle: true,
         elevation: 1,
         shadowColor: Colors.black38,
         leading: IconButton(
@@ -26,13 +26,32 @@ class _NoteCreationScreenState extends State<NoteCreationScreen> {
           ),
           onPressed: () => Navigator.of(context).pop(),
         ),
+        title: Text(
+          'New Note',
+          style: blackTextStyle.copyWith(fontWeight: FontWeight.w600),
+        ),
       ),
       body: SafeArea(
+        child: Center(
           child: SingleChildScrollView(
-        child: Column(
-          children: [Row()],
+            child: Container(
+                padding: EdgeInsets.symmetric(horizontal: defaultSpace),
+                child: Row(
+                  children: [
+                    Expanded(
+                        flex: 1,
+                        child: AppInput(
+                          hintText: "Title",
+                        )),
+                    SizedBox(
+                      width: 21,
+                    ),
+                    Expanded(flex: 2, child: Text("hallo"))
+                  ],
+                )),
+          ),
         ),
-      )),
+      ),
     );
   }
 }

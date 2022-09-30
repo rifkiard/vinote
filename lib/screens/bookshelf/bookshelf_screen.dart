@@ -1,7 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
-import 'package:vinote/components/app_note_creation_dialog.dart';
 import 'package:vinote/constants.dart';
 import 'package:vinote/screens/bookshelf/components/app_book.dart';
 
@@ -59,12 +58,7 @@ class _BookshelfScreenState extends State<BookshelfScreen> {
               foregroundColor: Colors.white,
               label: 'New Note',
               onTap: () {
-                showDialog(
-                  context: context,
-                  barrierDismissible: false,
-                  builder: (BuildContext context) =>
-                      const AppNoteCreationDialog(),
-                );
+                Navigator.pushNamed(context, 'note-creation');
               },
               elevation: 1,
             ),
@@ -72,11 +66,11 @@ class _BookshelfScreenState extends State<BookshelfScreen> {
       body: SafeArea(
           child: GridView.count(
         padding: EdgeInsets.symmetric(horizontal: defaultSpace, vertical: 31),
-        childAspectRatio: 4.7 / 10,
+        childAspectRatio: 4.5 / 10,
         crossAxisSpacing: 20,
-        mainAxisSpacing: 20,
+        mainAxisSpacing: 10,
         crossAxisCount: 6,
-        children: [
+        children: const [
           AppBook(),
           AppBook(),
           AppBook(),
