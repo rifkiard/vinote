@@ -44,9 +44,31 @@ class _NoteCreationScreenState extends State<NoteCreationScreen> {
                           hintText: "Title",
                         )),
                     SizedBox(
-                      width: 21,
+                      width: 30,
                     ),
-                    Expanded(flex: 2, child: Text("hallo"))
+                    Expanded(
+                        flex: 2,
+                        child: Container(
+                          color: primaryColor,
+                          child: IntrinsicHeight(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                Expanded(
+                                    child: Container(
+                                        color: gray300Color,
+                                        child: Text('hallo \n\n\n\n d'))),
+                                SizedBox(
+                                  width: 21,
+                                ),
+                                Expanded(
+                                    child: Container(
+                                        color: gray300Color,
+                                        child: Text('hallo')))
+                              ],
+                            ),
+                          ),
+                        ))
                   ],
                 )),
           ),
